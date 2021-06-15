@@ -1,16 +1,22 @@
-<div class="form-group">
-    <label for="title">Title</label>
-    <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-control">
+<div class="field">
+    <label class="label" for="title">Title</label>
+    <div class="control">
+        <input required value="<%= article.title %>" type="text" name="title" id="title" placeholder="Enter blog title..." class="input">
+    </div>
 </div>
 
-<div class="form-group">
-    <label for="description">Description</label>
-    <textarea name="description" id="description" class="form-control"><%= article.description %> </textarea>
+<div class="field">
+    <label class="label" for="description">Description</label>
+    <div class="control">
+        <input required value="<%= article.description %>" name="description" id="description" placeholder="Enter blog description..." class="input"> </input>
+    </div>
 </div>
 
-<div class="form-group">
-    <label for="markdown">Markdown</label>
-    <textarea required name="markdown" id="markdown" class="form-control"><%= article.markdown %> </textarea>
+<div class="field">
+    <label class="label" for="markdown">Markdown</label>
+    <div class="control">
+        <input required value="<%= article.markdown %>" name="markdown" id="markdown" class="input" placeholder="Enter blog content..."></input>
+    </div>
 </div>
 
 <a href="/" class="button is-secondary is-light">Cancel</a>

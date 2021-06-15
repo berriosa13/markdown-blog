@@ -8,9 +8,8 @@
   <title>Blog</title>
 </head>
 <body>
-  <div class="container">
+  <div class="content mt-4 ml-4">
     <h1 class="mb-4">Edit Article</h1>
-
     <form action="/articles/<%= article.id %>?_method=PUT" method="POST">
       <%- include('_form_fields') %>
     </form>

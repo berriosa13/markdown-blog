@@ -9,28 +9,45 @@
   <title>Blog</title>
 </head>
 <body>
-  <div class="content">
-    <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
+  <div class="content mb-4 ml-4 mt-4">
+    <h1 class="">Blog Articles</h1>
+    <a href="/articles/new" class="button is-success is-rounded is-light">New Article</a>
 
     <% articles.forEach(article => { %>
       <div class="card mt-4">
-        <div class="card-body">
+        <div class="card-body py-4 ml-4">
           <h4 class="card-title"><%= article.title %></h4>
-          <div class="card-subtitle text-muted mb-2">
+          <div class="card-subtitle has-text-weight-light mb-2">
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text mb-2"><%= article.description %></div>
-          <a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
-          <a href="articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-            <!-- <button type="submit" class="btn btn-danger">Delete</button> -->
-            <a type="submit" class="button is-danger is-outlined">
+
+          <button class="button is-warning is-rounded is-light">
+            <a href="articles/<%= article.slug %>">
+              <span>Read More</span>
+              <span class="icon is-small">
+                <i class="fas fa-book"></i>
+              </span>
+            </a>
+
+          </button>
+
+
+          <button class="button is-info is-rounded is-light">
+            <a href="articles/edit/<%= article.id %>">
+              <span>Edit</span>
+              <span class="icon is-small">
+                <i class="far fa-edit"></i>
+              </span>
+            </a>
+          </button>
+          <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="is-inline">
+            <button type="submit" class="button is-danger is-rounded is-light">
               <span>Delete</span>
               <span class="icon is-small">
                 <i class="fas fa-times"></i>
               </span>
-            </a>
+            </button>
           </form>
         </div>
       </div>

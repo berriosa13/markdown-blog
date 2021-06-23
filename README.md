@@ -1,0 +1,1 @@
+Full stack blog application that allow users to add blog posts, edit them after creation, view them, and delete them.  Utilizes Node.js, Express.js, & Mongoose on the backend.  Utilizes EJS and Bulma on the frontend.   
